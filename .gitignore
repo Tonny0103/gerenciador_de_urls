@@ -1,0 +1,30 @@
+# CLion
+.idea/
+
+# CMake
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Build output
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Makefile gerado pelo CMake
+Makefile
+
+# CPack
+_CPack_Packages/
+*.tar.gz
+*.tar.bz2
+*.zip
