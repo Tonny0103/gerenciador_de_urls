@@ -1,0 +1,10 @@
+https://www.google.com|01/05/2026|08:14:02
+https://www.github.com|01/05/2026|08:17:45
+https://stackoverflow.com/questions/tagged/c|01/05/2026|08:23:11
+https://www.cplusplus.com/reference/cstdio/fscanf|01/05/2026|09:01:38
+https://www.wikipedia.org/wiki/Linked_list|01/05/2026|09:15:55
+https://www.youtube.com/watch?v=dQw4w9WgXcQ|01/05/2026|10:42:07
+https://docs.oracle.com/en/java/javase/17/docs/api|01/05/2026|11:08:29
+https://www.reddit.com/r/learnprogramming|01/05/2026|13:34:50
+https://marketplace.visualstudio.com/vscode|01/05/2026|14:02:16
+https://www.anthropic.com/claude|01/05/2026|14:58:33
