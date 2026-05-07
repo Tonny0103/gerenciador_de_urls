@@ -19,3 +19,10 @@ t_url* ler_url(char* linha) {
 
     return url;
 }
+
+void liberar_url(t_url* url) {
+    free(url->endereco);
+    free(url->data);
+    free(url->hora);
+    free(url);
+}
