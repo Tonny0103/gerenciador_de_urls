@@ -11,7 +11,7 @@ struct no {
 
 typedef struct no t_lista;
 
-void inserir_url(t_lista* lista, t_url* url);
+t_lista* inserir_url(t_lista* lista, t_url* url);
 void imprimir_lista(t_lista* lista);
 void liberar_lista(t_lista* lista);
 

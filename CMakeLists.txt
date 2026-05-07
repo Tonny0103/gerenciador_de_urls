@@ -6,4 +6,5 @@ set(CMAKE_C_STANDARD 11)
 add_executable(gerenciador_de_urls main.c
         include/url.h
         src/url.c
-        include/lista_url.h)
+        include/lista_url.h
+        src/lista_url.c)
