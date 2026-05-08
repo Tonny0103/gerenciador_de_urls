@@ -8,3 +8,5 @@ add_executable(gerenciador_de_urls main.c
         src/url.c
         include/lista_url.h
         src/lista_url.c)
+
+configure_file(data.txt data.txt COPYONLY)
