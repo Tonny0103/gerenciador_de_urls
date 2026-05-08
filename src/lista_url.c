@@ -32,3 +32,13 @@ void imprimir_lista(t_lista* lista) {
         atual = atual->proximo;
     }
 }
+
+void liberar_lista(t_lista* lista) {
+    t_lista* atual = lista;
+    while (atual != NULL) {
+        liberar_url(atual->url);
+        t_lista* proximo = atual->proximo;
+        free(atual);
+        atual = proximo;
+    }
+}
