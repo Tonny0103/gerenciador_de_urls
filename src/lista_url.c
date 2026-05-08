@@ -11,11 +11,15 @@ t_lista* criar_no(t_url* url) {
 }
 
 t_lista* inserir_url(t_lista* lista, t_url* url) {
-    t_lista *no = malloc(sizeof(t_lista));
+    t_lista* novo = criar_no(url);
 
-    no->url = url;
-    no->proximo = NULL;
-    no->anterior = lista;
+    if (lista == NULL) return novo;
 
-    return no;
+    t_lista* atual = lista;
+    while (atual->proximo != NULL) atual = atual->proximo;
+
+    atual->proximo = novo;
+    novo->anterior = atual;
+
+    return novo;
 }
