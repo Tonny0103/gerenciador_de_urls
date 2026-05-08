@@ -4,7 +4,7 @@
 #include "lista_url.h"
 
 void navegar(t_lista* lista);
-void avancar_pagina(t_lista* lista);
-void voltar_pagina(t_lista* lista);
+void avancar_pagina(t_lista* atual);
+void voltar_pagina(t_lista* atual);
 
 #endif //GERENCIADOR_DE_URLS_NAVEGACAO_H
