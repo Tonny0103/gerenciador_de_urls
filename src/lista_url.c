@@ -1,5 +1,6 @@
 #include "../include/lista_url.h"
 
+#include <stdio.h>
 #include <stdlib.h>
 
 t_lista* criar_no(t_url* url) {
@@ -22,4 +23,12 @@ t_lista* inserir_url(t_lista* lista, t_url* url) {
     novo->anterior = atual;
 
     return novo;
+}
+
+void imprimir_lista(t_lista* lista) {
+    t_lista* atual = lista;
+    while (atual != NULL) {
+        printf("%s|%s|%s\n", atual->url->endereco, atual->url->data, atual->url->hora);
+        atual = atual->proximo;
+    }
 }
