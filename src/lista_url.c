@@ -33,6 +33,12 @@ void imprimir_lista(t_lista* lista) {
     }
 }
 
+void editar_url(t_lista** item_lista, t_url* novo) {
+    t_url* url_antiga = (*item_lista)->url;
+    (*item_lista)->url = novo;
+    liberar_url(url_antiga);
+}
+
 void liberar_lista(t_lista* lista) {
     t_lista* atual = lista;
     while (atual != NULL) {
