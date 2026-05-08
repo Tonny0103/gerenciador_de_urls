@@ -1,5 +1,6 @@
 #include "../include/url.h"
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -25,4 +26,11 @@ void liberar_url(t_url* url) {
     free(url->data);
     free(url->hora);
     free(url);
+}
+
+void imprimir_url(t_url* url) {
+    printf("URL: %s\n", url->endereco);
+    printf("Data: %s\n", url->data);
+    printf("Hora: %s\n", url->hora);
+    printf("\n");
 }

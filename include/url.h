@@ -10,7 +10,7 @@ struct url {
 typedef struct url t_url;
 
 t_url* ler_url(char* linha);
-void editar_url(t_url* url);
 void liberar_url(t_url* url);
+void imprimir_url(t_url* url);
 
 #endif //GERENCIADOR_DE_URLS_URL_H
