@@ -7,6 +7,7 @@ add_executable(gerenciador_de_urls main.c
         include/url.h
         src/url.c
         include/lista_url.h
-        src/lista_url.c)
+        src/lista_url.c
+        include/navegacao.h)
 
 configure_file(data.txt data.txt COPYONLY)
