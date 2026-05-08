@@ -3,6 +3,6 @@
 
 #include "lista_url.h"
 
-void navegar(t_lista* lista, int operacao);
+t_lista* navegar(t_lista* atual, int operacao);
 
 #endif //GERENCIADOR_DE_URLS_NAVEGACAO_H
