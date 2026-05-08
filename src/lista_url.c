@@ -22,7 +22,7 @@ t_lista* inserir_url(t_lista* lista, t_url* url) {
     atual->proximo = novo;
     novo->anterior = atual;
 
-    return novo;
+    return lista;
 }
 
 void imprimir_lista(t_lista* lista) {
