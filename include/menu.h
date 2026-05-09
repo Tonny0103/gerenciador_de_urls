@@ -4,5 +4,6 @@
 #include "lista_url.h"
 
 void menu(t_lista* lista);
+void menu_editar(t_lista* atual);
 
 #endif //GERENCIADOR_DE_URLS_MENU_H
