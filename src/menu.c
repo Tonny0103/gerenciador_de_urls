@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../include/lista_url.h"
 #include "../include/navegacao.h"
+#include "../include/menu.h"
+#include "../include/dados.h"
 
 void menu_editar(t_lista* atual) {
     int op = 0;
@@ -32,7 +33,7 @@ void menu_editar(t_lista* atual) {
     }
 }
 
-void menu(t_lista* lista) {
+void menu_principal(t_lista* lista) {
     int op = 0;
     t_lista* atual = lista;
     while (op != 4) {
@@ -51,4 +52,11 @@ void menu(t_lista* lista) {
             else atual = navegar(atual, op);
         }
     }
+}
+
+void menu() {
+    t_lista* lista = obter_dados();
+    menu_principal(lista);
+    salvar_dados(lista);
+    liberar_lista(lista);
 }
