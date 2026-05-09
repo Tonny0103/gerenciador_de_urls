@@ -1,3 +1,15 @@
+/*
+* =========================================
+ * Disciplina  : Estrutura de Dados
+ * Aluno       : Anthonny Gabriell Marins Alves
+ * Turma       : Engenharia da Computação 2026.1
+ * Data        : 09/05/2026
+ * =========================================
+ * Arquivo     : dados.c
+ * Descrição   : Arquivo de implementação das funções referentes ao acesso dos dados de persistência.
+ * =========================================
+ */
+
 #include <stdio.h>
 #include "../include/dados.h"
 #include <string.h>
