@@ -34,3 +34,33 @@ void imprimir_url(t_url* url) {
     printf("Hora: %s\n", url->hora);
     printf("\n");
 }
+
+char* ler_endereco() {
+    char endereco[2083];
+    system("cls || clear");
+
+    printf("Digite o endereco de URL:\n");
+    scanf("%s", endereco);
+
+    return strdup(endereco);
+}
+
+char* ler_data() {
+    char data[10];
+    system("cls || clear");
+
+    printf("Digite a data de acesso da URL:\n");
+    scanf("%s", data);
+
+    return strdup(data);
+}
+
+char* ler_hora() {
+    char hora[10];
+    system("cls || clear");
+
+    printf("Digite a hora de acesso da URL:\n");
+    scanf("%s", hora);
+
+    return strdup(hora);
+}

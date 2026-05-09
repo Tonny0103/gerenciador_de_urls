@@ -12,5 +12,8 @@ typedef struct url t_url;
 t_url* ler_url(char* linha);
 void liberar_url(t_url* url);
 void imprimir_url(t_url* url);
+char* ler_endereco();
+char* ler_data();
+char* ler_hora();
 
 #endif //GERENCIADOR_DE_URLS_URL_H

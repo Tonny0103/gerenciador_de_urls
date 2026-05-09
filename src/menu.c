@@ -15,7 +15,8 @@ void menu(t_lista* lista) {
             printf("\n");
             if (atual->proximo != NULL) printf("1 - Proxima URL\n");
             if (atual->anterior != NULL) printf("2 - URL Anterior\n");
-            printf("3 - Sair\n");
+            printf("3 - Editar\n");
+            printf("4 - Sair\n");
             scanf("%d", &op);
             atual = navegar(atual, op);
         }
