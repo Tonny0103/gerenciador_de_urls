@@ -18,3 +18,15 @@ t_lista* obter_dados() {
 
     return lista;
 }
+
+void salvar_dados(t_lista* lista) {
+    FILE* arquivo = fopen("dados.txt", "w");
+    t_lista* atual = lista;
+    while (atual != NULL) {
+        fprintf(arquivo, "%s|", atual->url->endereco);
+        fprintf(arquivo, "%s|", atual->url->data);
+        fprintf(arquivo, "%s\n", atual->url->hora);
+        atual = atual->proximo;
+    }
+    fclose(arquivo);
+}

@@ -4,5 +4,6 @@
 #include "lista_url.h"
 
 t_lista* obter_dados();
+void salvar_dados(t_lista* lista);
 
 #endif //GERENCIADOR_DE_URLS_DADOS_H
