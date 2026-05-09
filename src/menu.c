@@ -32,11 +32,10 @@ void menu_editar(t_lista* atual) {
     }
 }
 
-
 void menu(t_lista* lista) {
     int op = 0;
     t_lista* atual = lista;
-    while (op != 3) {
+    while (op != 4) {
         if (atual != NULL) {
             system("cls || clear");
             printf("URL: %s\n", atual->url->endereco);
