@@ -1,3 +1,15 @@
+/*
+* =========================================
+ * Disciplina  : Estrutura de Dados
+ * Aluno       : Anthonny Gabriell Marins Alves
+ * Turma       : Engenharia da Computação 2026.1
+ * Data        : 09/05/2026
+ * =========================================
+ * Arquivo     : menu.h
+ * Descrição   : Arquivo de cabeçalho das funções referentes ao menu.
+ * =========================================
+ */
+
 #ifndef GERENCIADOR_DE_URLS_MENU_H
 #define GERENCIADOR_DE_URLS_MENU_H
 
