@@ -86,10 +86,10 @@ void menu_principal(t_lista* lista) {
                     menu_ir_para_endereco(atual);
                     break;
                 case 3:
-                    atual = navegar(atual, op);
+                    atual = navegar(atual, 1);
                     break;
                 case 4:
-                    atual = navegar(atual, op);
+                    atual = navegar(atual, 2);
                     break;
                 default:
                     printf("Digite uma opcao valida!\n");
