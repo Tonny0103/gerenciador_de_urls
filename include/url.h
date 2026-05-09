@@ -1,3 +1,15 @@
+/*
+* =========================================
+ * Disciplina  : Estrutura de Dados
+ * Aluno       : Anthonny Gabriell Marins Alves
+ * Turma       : Engenharia da Computação 2026.1
+ * Data        : 09/05/2026
+ * =========================================
+ * Arquivo     : nome_do_arquivo.c
+ * Descrição   : Arquivo de cabeçalho do tipo abstrato de dado da url e suas funções.
+ * =========================================
+ */
+
 #ifndef GERENCIADOR_DE_URLS_URL_H
 #define GERENCIADOR_DE_URLS_URL_H
 
