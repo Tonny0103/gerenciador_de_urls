@@ -50,7 +50,7 @@ char* ler_data() {
     system("cls || clear");
 
     printf("Digite a data de acesso da URL:\n");
-    scanf("%s", data);
+    scanf("%10s", data);
 
     return strdup(data);
 }
@@ -60,7 +60,7 @@ char* ler_hora() {
     system("cls || clear");
 
     printf("Digite a hora de acesso da URL:\n");
-    scanf("%s", hora);
+    scanf("%8s", hora);
 
     return strdup(hora);
 }
