@@ -6,5 +6,6 @@
 void menu();
 void menu_principal(t_lista* lista);
 void menu_editar(t_lista* atual);
+void menu_ir_para_endereco(t_lista* atual);
 
 #endif //GERENCIADOR_DE_URLS_MENU_H

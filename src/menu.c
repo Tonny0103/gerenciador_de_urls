@@ -1,9 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "../include/navegacao.h"
 #include "../include/menu.h"
 #include "../include/dados.h"
+
+void menu_ir_para_endereco(t_lista* atual) {
+    system("cls || clear");
+
+    time_t t = time(NULL);
+    struct tm* tm_info = localtime(&t);
+
+    t_url* url = malloc(sizeof(t_url));
+    char endereco[2084];
+    char data[11];
+    char hora[9];
+
+    printf("=== Ir para o endereco URL ===\n");
+    printf("Endereco: ");
+    scanf("%2083s", endereco);
+
+    strftime(data, sizeof(data), "%d/%m/%Y", tm_info);
+    strftime(hora, sizeof(hora), "%H:%M:%S", tm_info);
+
+    url->endereco = strdup(endereco);
+    url->data     = strdup(data);
+    url->hora     = strdup(hora);
+
+    inserir_url(atual, url);
+}
 
 void menu_editar(t_lista* atual) {
     int op = 0;
@@ -36,20 +62,38 @@ void menu_editar(t_lista* atual) {
 void menu_principal(t_lista* lista) {
     int op = 0;
     t_lista* atual = lista;
-    while (op != 4) {
+    while (op != 5) {
         if (atual != NULL) {
             system("cls || clear");
+
             printf("URL: %s\n", atual->url->endereco);
             printf("Data: %s\n", atual->url->data);
             printf("Hora: %s\n", atual->url->hora);
             printf("\n");
-            if (atual->proximo != NULL) printf("1 - Proxima URL\n");
-            if (atual->anterior != NULL) printf("2 - URL Anterior\n");
-            printf("3 - Editar\n");
-            printf("4 - Sair\n");
+            printf("1 - Editar URL\n");
+            printf("2 - Ir para o endereco\n");
+            if (atual->proximo != NULL) printf("3 - Proxima URL\n");
+            if (atual->anterior != NULL) printf("4 - URL Anterior\n");
+            printf("5 - Sair\n");
+
             scanf("%d", &op);
-            if (op == 3) menu_editar(atual);
-            else atual = navegar(atual, op);
+
+            switch (op) {
+                case 1:
+                    menu_editar(atual);
+                    break;
+                case 2:
+                    menu_ir_para_endereco(atual);
+                    break;
+                case 3:
+                    atual = navegar(atual, op);
+                    break;
+                case 4:
+                    atual = navegar(atual, op);
+                    break;
+                default:
+                    printf("Digite uma opcao valida!\n");
+            }
         }
     }
 }
