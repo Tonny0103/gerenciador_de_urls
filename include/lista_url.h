@@ -29,5 +29,6 @@ t_lista* inserir_url(t_lista* lista, t_url* url);
 void editar_url(t_lista* item_lista, t_url* novo);
 void imprimir_lista(t_lista* lista);
 void liberar_lista(t_lista* lista);
+int tamanho_lista(t_lista* lista);
 
 #endif //GERENCIADOR_DE_URLS_LISTA_H

@@ -77,9 +77,10 @@ void menu_principal(t_lista* lista) {
     while (op != 5) {
         if (atual != NULL) {
             system("cls || clear");
+            int tamanho = tamanho_lista(lista);
 
             printf("=== Menu Principal ===\n");
-            printf("Indice: %d\n", atual->indece);
+            printf("%d de %d\n", atual->indece + 1, tamanho);
             printf("URL: %s\n", atual->url->endereco);
             printf("Data: %s\n", atual->url->data);
             printf("Hora: %s\n", atual->url->hora);

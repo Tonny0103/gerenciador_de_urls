@@ -65,3 +65,13 @@ void liberar_lista(t_lista* lista) {
         atual = proximo;
     }
 }
+
+int tamanho_lista(t_lista* lista) {
+    int contador = 0;
+    t_lista* atual = lista;
+    while (atual != NULL) {
+        contador++;
+        atual = atual->proximo;
+    }
+    return contador;
+}
