@@ -4,6 +4,7 @@
 #include "url.h"
 
 struct no {
+    int indece;
     t_url* url;
     struct no* proximo;
     struct no* anterior;

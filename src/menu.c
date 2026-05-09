@@ -66,6 +66,8 @@ void menu_principal(t_lista* lista) {
         if (atual != NULL) {
             system("cls || clear");
 
+            printf("=== Menu Principal ===\n");
+            printf("Indice: %d\n", atual->indece);
             printf("URL: %s\n", atual->url->endereco);
             printf("Data: %s\n", atual->url->data);
             printf("Hora: %s\n", atual->url->hora);
