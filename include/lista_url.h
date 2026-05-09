@@ -1,3 +1,15 @@
+/*
+* =========================================
+ * Disciplina  : Estrutura de Dados
+ * Aluno       : Anthonny Gabriell Marins Alves
+ * Turma       : Engenharia da Computação 2026.1
+ * Data        : 09/05/2026
+ * =========================================
+ * Arquivo     : lista_url.h
+ * Descrição   : Arquivo de cabeçalho para declaração dos tipos e funções referentes a lista duplamente encadeada de url.
+ * =========================================
+ */
+
 #ifndef GERENCIADOR_DE_URLS_LISTA_H
 #define GERENCIADOR_DE_URLS_LISTA_H
 

@@ -1,5 +1,16 @@
-#include "../include/lista_url.h"
+/*
+* =========================================
+ * Disciplina  : Estrutura de Dados
+ * Aluno       : Anthonny Gabriell Marins Alves
+ * Turma       : Engenharia da Computação 2026.1
+ * Data        : 09/05/2026
+ * =========================================
+ * Arquivo     : lista_url.c
+ * Descrição   : Arquivo de implementação das funções referentes a lista de url.
+ * =========================================
+ */
 
+#include "../include/lista_url.h"
 #include <stdio.h>
 #include <stdlib.h>
 
