@@ -5,7 +5,7 @@
  * Turma       : Engenharia da Computação 2026.1
  * Data        : 09/05/2026
  * =========================================
- * Arquivo     : nome_do_arquivo.c
+ * Arquivo     : url.h
  * Descrição   : Arquivo de cabeçalho do tipo abstrato de dado da url e suas funções.
  * =========================================
  */

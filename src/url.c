@@ -5,7 +5,7 @@
  * Turma       : Engenharia da Computação 2026.1
  * Data        : 09/05/2026
  * =========================================
- * Arquivo     : nome_do_arquivo.c
+ * Arquivo     : url.c
  * Descrição   : Arquivo de implementação das funções referentes ao tipo abstrato de dado da url.
  * =========================================
  */
