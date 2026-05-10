@@ -141,6 +141,7 @@ void menu_principal(t_lista** lista) {
                 }
                 *lista = inicio;
                 break;
+            case 6: return;
             default:
                 printf("Digite uma opcao valida!\n");
         }
