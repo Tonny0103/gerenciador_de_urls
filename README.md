@@ -12,6 +12,7 @@ Simulação de um histórico de navegação web implementado em linguagem C, uti
 - **Avançar** — navega para a próxima URL no histórico
 - **Voltar** — retorna à URL anterior no histórico
 - **Editar endereço** — permite alterar a URL, data ou hora de um registro existente
+- **Excluir endereço** — permite excluir um item da lista de URL
 - **Exibir histórico** — lista todas as URLs salvas, destacando a posição atual
 - **Persistência** — carrega o histórico do arquivo `dados.txt` ao iniciar e salva automaticamente ao encerrar
 
