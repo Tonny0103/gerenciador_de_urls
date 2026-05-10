@@ -52,6 +52,25 @@ void editar_url(t_lista* item_lista, t_url* novo) {
     liberar_url(url_antiga);
 }
 
+t_lista* remover_url(t_lista* item_lista) {
+    t_lista* destino = NULL;
+
+    if (item_lista->anterior != NULL) {
+        item_lista->anterior->proximo = item_lista->proximo;
+        destino = item_lista->anterior;
+    }
+
+    if (item_lista->proximo != NULL) {
+        item_lista->proximo->anterior = item_lista->anterior;
+        if (destino == NULL) destino = item_lista->proximo;
+    }
+
+    liberar_url(item_lista->url);
+    free(item_lista);
+
+    return destino;
+}
+
 void liberar_lista(t_lista* lista) {
     t_lista* atual = lista;
     while (atual != NULL) {

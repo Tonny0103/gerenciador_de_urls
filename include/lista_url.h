@@ -27,6 +27,7 @@ typedef struct no t_lista;
 t_lista* criar_no(t_url* url);
 t_lista* inserir_url(t_lista* lista, t_url* url);
 void editar_url(t_lista* item_lista, t_url* novo);
+t_lista* remover_url(t_lista* item_lista);
 void imprimir_lista(t_lista* lista);
 void liberar_lista(t_lista* lista);
 int tamanho_lista(t_lista* lista);

@@ -87,7 +87,7 @@ void menu_principal(t_lista** lista) {
     t_lista* inicio = *lista;
     t_lista* atual = *lista;
 
-    while (op != 5) {
+    while (op != 6) {
         system("cls || clear");
 
         int tamanho = tamanho_lista(*lista);
@@ -108,7 +108,8 @@ void menu_principal(t_lista** lista) {
             printf("2 - Ir para o endereco\n");
             if (atual->proximo != NULL) printf("3 - Proxima URL\n");
             if (atual->anterior != NULL) printf("4 - URL Anterior\n");
-            printf("5 - Sair\n");
+            printf("5 - Remover URL\n");
+            printf("6 - Sair\n");
         }
         printf("\n");
 
@@ -129,6 +130,16 @@ void menu_principal(t_lista** lista) {
                 break;
             case 4:
                 atual = navegar(atual, 2);
+                break;
+            case 5:
+                atual = remover_url(atual);
+                if (atual != NULL) {
+                    inicio = atual;
+                    while (inicio->anterior != NULL) inicio = inicio->anterior;
+                } else {
+                    inicio = NULL;
+                }
+                *lista = inicio;
                 break;
             default:
                 printf("Digite uma opcao valida!\n");
