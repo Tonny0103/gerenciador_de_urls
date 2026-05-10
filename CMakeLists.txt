@@ -14,5 +14,3 @@ add_executable(gerenciador_de_urls main.c
         src/menu.c
         include/dados.h
         src/dados.c)
-
-configure_file(dados.txt dados.txt COPYONLY)
