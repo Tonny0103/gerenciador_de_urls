@@ -21,6 +21,16 @@
 void menu_ir_para_endereco(t_lista** atual) {
     system("cls || clear");
 
+    t_lista* inicio = *atual;
+    while (inicio != NULL && inicio->anterior != NULL) inicio = inicio->anterior;
+    if (tamanho_lista(inicio) >= 10) {
+        printf("=== Limite atingido ===\n");
+        printf("O historico ja possui 10 URLs. Remova uma antes de adicionar.\n");
+        printf("\nPressione ENTER para voltar...");
+        getchar(); getchar();
+        return;
+    }
+
     time_t t = time(NULL);
     struct tm* tm_info = localtime(&t);
 
