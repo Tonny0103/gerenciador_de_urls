@@ -47,6 +47,9 @@ O programa utiliza uma **lista duplamente encadeada** com capacidade máxima de 
     └── url.c
 ```
 
+## Online GDB
+Case seja de preferência, utilize o [Online GDB](https://onlinegdb.com/qeMfzmcpH) para testar o código.
+
 ## Requisitos
 
 - GCC ou outro compilador C compatível
