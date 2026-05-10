@@ -33,6 +33,12 @@ t_lista* obter_dados() {
 
 void salvar_dados(t_lista* lista) {
     FILE* arquivo = fopen("dados.txt", "w");
+
+    if (arquivo == NULL) {
+        printf("Erro: nao foi possivel salvar os dados.\n");
+        return;
+    }
+
     t_lista* atual = lista;
     while (atual != NULL) {
         fprintf(arquivo, "%s|", atual->url->endereco);
@@ -40,5 +46,6 @@ void salvar_dados(t_lista* lista) {
         fprintf(arquivo, "%s\n", atual->url->hora);
         atual = atual->proximo;
     }
+
     fclose(arquivo);
 }
