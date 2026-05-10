@@ -16,7 +16,7 @@
 #include "url.h"
 
 struct no {
-    int indece;
+    int indice;
     t_url* url;
     struct no* proximo;
     struct no* anterior;

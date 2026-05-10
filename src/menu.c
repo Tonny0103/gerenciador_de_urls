@@ -18,7 +18,7 @@
 #include "../include/menu.h"
 #include "../include/dados.h"
 
-void menu_ir_para_endereco(t_lista* atual) {
+void menu_ir_para_endereco(t_lista** atual) {
     system("cls || clear");
 
     time_t t = time(NULL);
@@ -40,7 +40,8 @@ void menu_ir_para_endereco(t_lista* atual) {
     url->data     = strdup(data);
     url->hora     = strdup(hora);
 
-    inserir_url(atual, url);
+    *atual = inserir_url(*atual, url);
+    while ((*atual)->proximo != NULL) *atual = (*atual)->proximo;
 }
 
 void menu_editar(t_lista* atual) {
@@ -71,16 +72,24 @@ void menu_editar(t_lista* atual) {
     }
 }
 
-void menu_principal(t_lista* lista) {
+void menu_principal(t_lista** lista) {
     int op = 0;
-    t_lista* atual = lista;
-    while (op != 5) {
-        if (atual != NULL) {
-            system("cls || clear");
-            int tamanho = tamanho_lista(lista);
+    t_lista* inicio = *lista;
+    t_lista* atual = *lista;
 
-            printf("=== Menu Principal ===\n");
-            printf("%d de %d\n", atual->indece + 1, tamanho);
+    while (op != 5) {
+        system("cls || clear");
+
+        int tamanho = tamanho_lista(*lista);
+
+        printf("=== Menu Principal ===\n");
+        if (atual == NULL) {
+            printf("Nenhuma URL cadastrada! Use a opcao 2 para adicionar.\n");
+            printf("\n");
+            printf("2 - Ir para o endereco\n");
+            printf("5 - Sair\n");
+        } else {
+            printf("%d de %d\n", atual->indice + 1, tamanho);
             printf("URL: %s\n", atual->url->endereco);
             printf("Data: %s\n", atual->url->data);
             printf("Hora: %s\n", atual->url->hora);
@@ -90,32 +99,36 @@ void menu_principal(t_lista* lista) {
             if (atual->proximo != NULL) printf("3 - Proxima URL\n");
             if (atual->anterior != NULL) printf("4 - URL Anterior\n");
             printf("5 - Sair\n");
+        }
+        printf("\n");
 
-            scanf("%d", &op);
+        scanf("%d", &op);
 
-            switch (op) {
-                case 1:
-                    menu_editar(atual);
-                    break;
-                case 2:
-                    menu_ir_para_endereco(atual);
-                    break;
-                case 3:
-                    atual = navegar(atual, 1);
-                    break;
-                case 4:
-                    atual = navegar(atual, 2);
-                    break;
-                default:
-                    printf("Digite uma opcao valida!\n");
-            }
+        switch (op) {
+            case 1:
+                menu_editar(atual);
+                break;
+            case 2:
+                menu_ir_para_endereco(&atual);
+                inicio = atual;
+                while (inicio->anterior != NULL) inicio = inicio->anterior;
+                *lista = inicio;
+                break;
+            case 3:
+                atual = navegar(atual, 1);
+                break;
+            case 4:
+                atual = navegar(atual, 2);
+                break;
+            default:
+                printf("Digite uma opcao valida!\n");
         }
     }
 }
 
 void menu() {
     t_lista* lista = obter_dados();
-    menu_principal(lista);
+    menu_principal(&lista);
     salvar_dados(lista);
     liberar_lista(lista);
 }
